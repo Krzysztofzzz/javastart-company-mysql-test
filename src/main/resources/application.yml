@@ -6,5 +6,6 @@ spring:
     password: password
   jpa:
     show-sql: true #pokazuje zapytania sql w konsoli
-    hibernate:
-      ddl-auto: create-drop #bez tego, dziala tylko dla wbudowanych baz danych. dla zewnetrznych trzeba tego uzyc
+  sql:
+    init:
+      mode: always #Dla baz niewbudowanych zawarto?? pliku schema.sql domy?lnie nie jest wykonywana, dlatego nale?y w pliku application.yml doda? w?asno?? spring.sql.init.mode ustawion? na always.
