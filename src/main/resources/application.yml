@@ -1,9 +1,10 @@
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/company?useSSL=false&serverTimezone=Europe/Warsaw
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver #zaleznosc do MySql
     username: root
     password: password
   jpa:
-    show-sql: true
+    show-sql: true #pokazuje zapytania sql w konsoli
+    hibernate:
+      ddl-auto: create-drop #bez tego, dziala tylko dla wbudowanych baz danych. dla zewnetrznych trzeba tego uzyc
